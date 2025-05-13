@@ -14,7 +14,7 @@
 
 
 
-<title>My New Post | Hexo</title>
+<title>SQL注入 | Hexo</title>
 
 
 
@@ -111,12 +111,12 @@
         <div class="post-title">
             
             
-                My New Post
+                SQL注入
             
             
         </div>
         <span class="post-date">
-            May 7, 2025
+            May 8, 2025
         </span>
     </div>
     <div class="post-img">
@@ -126,7 +126,47 @@
     </div>
 </div>
     <div class="post-content">
-    
+    <h1 id="SQL注入"><a href="#SQL注入" class="headerlink" title="SQL注入"></a>SQL注入</h1><h2 id="什么是SQL注入"><a href="#什么是SQL注入" class="headerlink" title="什么是SQL注入"></a>什么是SQL注入</h2><p>sql注入的意思是原本的sql语句被用户的输入控制。</p>
+<p>服务器错误地拼接用户提交的恶意参数，使sql语句原本的运行逻辑被改变，导致攻击者可以部分或者完全掌控SQL语句的执行效果。</p>
+<p>通常服务器会根据用户提交的参数进行增删改查等操作，但如果用户通过引入闭合符，在保证原有的语法正确的情况下，引入新逻辑的语句执行，达到想要的效果。</p>
+<h2 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h2><p>结构性查询语言(Strucured Query Language)简称SQL。关系型数据库的标准语言，如Oracle，Mysql，Microsoft SQL Server，Access，SQLite，DB2，ngres，Sybase，PostgreSQL等。</p>
+<p>数据库提供了一个数据检索和存储的作用。</p>
+<h2 id="SQLi的利用手法"><a href="#SQLi的利用手法" class="headerlink" title="SQLi的利用手法"></a>SQLi的利用手法</h2><ol>
+<li>报错注入(Error-Based SQL Injection)<ol>
+<li>基于报错的SQL注入检测<ul>
+<li>拼接单引号，反斜杠构造语法错误。</li>
+</ul>
+</li>
+<li>基于报错的sql注入攻击<ul>
+<li>floor(),extratvalue(),updatexml()…</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>Union注入<ol>
+<li>基于Union的SQL注入检测</li>
+<li>基于Union的SQL注入攻击</li>
+</ol>
+</li>
+<li>布尔注入<ol>
+<li>基于布尔的SQL注入检测</li>
+<li>基于布尔的SQL注入攻击</li>
+</ol>
+</li>
+<li>时间注入<ol>
+<li>基于时间的SQL注入检测<ul>
+<li>sleep(),benchmark(),笛卡尔积，长连接get_lock(),</li>
+<li>sql server中 WAITFOR DELAY ‘0:0:6’</li>
+<li>PostgreSQL pg_sleep(3)</li>
+<li>Oracle DBMS_PIPE.RECEIVE_MESSAGE(‘a’,7) decode()</li>
+</ul>
+</li>
+<li>基于时间的SQL注入攻击</li>
+</ol>
+</li>
+<li>DNS查询注入</li>
+</ol>
+
 </div> 
 
 <script>
@@ -139,7 +179,7 @@
            
                 <div class="icon arrow-left"></div>
                 <div class="post-link">
-                    <a href="/2025/05/08/new-page/">Prev</a>
+                    <a href="/2025/05/11/%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E6%94%BB%E5%87%BB/">Prev</a>
                 </div>
             
         </div>

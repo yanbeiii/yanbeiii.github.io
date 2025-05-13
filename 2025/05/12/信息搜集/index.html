@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="John Doe">
+
+
+
+
+
+
+
+<title>信息搜集 | Hexo</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Roboto+Mono&display=swap');
+</style>
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/frame.js"></script>
+    
+
+
+
+
+
+
+<script src='https://unpkg.com/valine@1.4.16/dist/Valine.min.js'></script>
+
+
+
+  <meta name="generator" content="Hexo 7.3.0"></head>
+  <body>
+    <div class="mask-border">
+    </div>
+
+    <div class="wrapper">
+
+      <div class="header">
+  <div class="flex-container">
+    <div class="header-inner">
+      <div class="site-brand-container">
+        <a href="/">
+          
+            Ekks的博客.
+          
+        </a>
+      </div>
+      <div id="menu-btn" class="menu-btn" onclick="toggleMenu()">
+        Menu
+      </div>
+      <nav class="site-nav">
+        <ul class="menu-list">
+          
+            
+              <li class="menu-item">
+                <a href="/">Home</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/archives/">Archive</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/categories/gallery/">Gallery</a>
+              </li> 
+                   
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main">
+        <div class="flex-container">
+          <article id="post">
+
+  
+    <div class="post-head">
+    <div class="post-info">
+        <div class="tag-list">
+            
+        </div>
+        <div class="post-title">
+            
+            
+                信息搜集
+            
+            
+        </div>
+        <span class="post-date">
+            May 12, 2025
+        </span>
+    </div>
+    <div class="post-img">
+        
+            <div class="h-line-primary"></div>
+              
+    </div>
+</div>
+    <div class="post-content">
+    <p>信息搜集通常包括域名信息，真实IP，旁站和C段，端口，目录，指纹，敏感信息，社工，移动端。</p>
+<h2 id="信息搜集的方法"><a href="#信息搜集的方法" class="headerlink" title="信息搜集的方法"></a>信息搜集的方法</h2><ol>
+<li><p>域名信息</p>
+<ul>
+<li>whois查询</li>
+<li>子域名收集-&gt;<a target="_blank" rel="noopener" href="https://github.com/shmilylty/OneForAll">OneForAll</a>中有多种模块可以参考，爬虫，在线接口，网络测绘搜索引擎，暴力枚举，证书中使用者可选名称，网页信息,robots.txt&#x2F;sitemap.xml，&#x3D;&#x3D;域传送漏洞&#x3D;&#x3D;，在线DNS数据</li>
+<li>备案信息 公司资产 个人信息</li>
+</ul>
+</li>
+<li><p>真实IP</p>
+<ul>
+<li>CDN判断-&gt;超级ping，请求的URLcdn字段&#x2F;cdn服务商名称如cloudflarecdn.cloudflare.com，cname记录查询，nslookup，ip反查</li>
+<li>CDN绕过-&gt;子域名，网络空间搜索引擎，历史DNS解析，邮件服务器，信息泄露(phpinfo,debug)，国外访问，ssl证书</li>
+<li>DNS查询-&gt;系统指令（nslookup，dig，host，dnsenum…)，历史解析记录（DNSdb，微步在线…)</li>
+<li>路由追踪</li>
+</ul>
+</li>
+<li><p>旁站和C段IP</p>
+<ul>
+<li>在线查询，网络空间搜索引擎，google hacking，nmap，goby</li>
+</ul>
+</li>
+<li><p>端口信息</p>
+<ul>
+<li>nmap</li>
+<li>TscanPlus…</li>
+</ul>
+</li>
+<li><p>*目录信息</p>
+<ul>
+<li><p>robots.txt,crossdomin.xml,sitemap.xml</p>
+</li>
+<li><p>扫描网站目录结构，看看是否可以遍历目录，或者敏感文件泄漏dirsearch，dirbuster，7kbscan…</p>
+</li>
+<li><p>后台目录：弱口令，万能密码，爆破</p>
+</li>
+<li><p>安装包：获取数据库信息，甚至是网站源码</p>
+</li>
+<li><p>上传目录：截断、上传图片马等</p>
+</li>
+<li><p>mysql管理接口：弱口令、爆破，万能密码，然后脱裤，甚至是拿到shell</p>
+</li>
+<li><p>安装页面 ：可以二次安装进而绕过</p>
+</li>
+<li><p>phpinfo：会把你配置的各种信息暴露出来</p>
+</li>
+<li><p>编辑器：fck、ke、等</p>
+</li>
+<li><p>iis短文件利用：条件比较苛刻 windows、apache等</p>
+</li>
+</ul>
+</li>
+<li><p>指纹信息</p>
+<ul>
+<li><p>操作系统-&gt;ping TTL值判断  大小写判断 windows 128 不区分大小写、Linux 64 区分大小写-&gt;版本 nmap -O -A</p>
+</li>
+<li><p>Web系统</p>
+<ol>
+<li>开发语言 url后缀 插件wappalyzer 修改首页文件后缀 爬取网站目录</li>
+<li>中间件 HTTP头信息，wappalyzer，网站结构URL模式，HTML源码，公司招聘信息中列出的技术栈</li>
+<li>Web框架 页面源代码 HTTP头 cookies 特殊文件和文件夹 插件wappalyzer  图标 &#x3D;&#x3D;特殊路由&#x3D;&#x3D;</li>
+<li>CMS 云悉指纹，潮汐指纹</li>
+<li>OA系统信息</li>
+<li>数据库类型-&gt;端口，常见搭配</li>
+</ol>
+</li>
+<li><p>安全设备</p>
+<ol>
+<li>WAF</li>
+</ol>
+<ul>
+<li>云waf，硬件waf，软件waf，代码waf</li>
+<li>拦截页面识别</li>
+<li>识别工具wafw00f  identYwaf</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>敏感信息泄露</p>
+<ol>
+<li>源代码泄露-&gt;git,svn,备份,db_store</li>
+<li>github,gitee</li>
+<li>配置文件phpinfo http.conf nginx.conf tomcat等</li>
+<li>历史漏洞信息收集</li>
+</ol>
+</li>
+<li><p>综合工具</p>
+<ul>
+<li>灯塔ARL</li>
+<li>搜索引擎</li>
+<li>google hack</li>
+</ul>
+</li>
+<li><p>社工</p>
+<ul>
+<li>whois</li>
+<li>邮箱</li>
+<li>大数据查询</li>
+</ul>
+</li>
+<li><p>移动端</p>
+<ul>
+<li>app逆向-&gt;七麦数据，应用商店</li>
+<li>小程序</li>
+<li>公众号</li>
+<li>api接口</li>
+</ul>
+</li>
+</ol>
+<h2 id="信息搜集的作用"><a href="#信息搜集的作用" class="headerlink" title="信息搜集的作用"></a>信息搜集的作用</h2><p>收集目标的网络架构，IT资产，敏感信息，供应链… </p>
+<p>域名信息<br>    1. 个人信息 社工<br>    2. 子域名 寻找脆弱资产 CDN绕过<br>    3. 备案信息 资产收集 扩大攻击面</p>
+<p>真实IP<br>    1. 端口扫描<br>    2. 旁站C段</p>
+<p>端口信息<br>    1. 识别服务和版本</p>
+<p>目录信息<br>    1. 网站后台<br>    2. 网站框架</p>
+<p>指纹信息<br>    1. 框架<br>    2. 中间件<br>    3. 服务器<br>    4. 代理<br>    5. 编程语言</p>
+<p>敏感信息<br>    1. robots 后台，CMS<br>    2. 安装包 源码泄露<br>    3. phpinfo 被指谢谢<br>    4. 后台页面 暴力破解
+    </p>
+
+</div> 
+
+<script>
+    window.onload = detectors();
+</script>
+    <div class="post-footer">
+    <div class="h-line-primary"></div>
+    <nav class="post-nav">
+        <div class="prev-item">
+           
+        </div>
+        <div class="next-item">
+            
+                <div class="icon arrow-right"></div>
+                <div class="post-link">
+                  <a href="/2025/05/11/%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E6%94%BB%E5%87%BB/">Next</a>  
+                </div>  
+            
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="post-comment">
+
+     
+
+     
+    
+    
+
+</div>
+     
+  
+</article>
+        </div>
+      </div>
+      
+      <div class="footer">
+    <div class="flex-container">
+        <div class="footer-text">
+            
+            
+            
+                Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/zoeingwingkei/frame/">Frame</a>
+                
+        </div>
+    </div>
+</div>
+
+    </div>
+
+  </body>
+</html>
